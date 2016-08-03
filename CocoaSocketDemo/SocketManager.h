@@ -10,4 +10,8 @@
 
 @interface SocketManager : NSObject
 
++ (instancetype)sharedManager;
+- (void)startSocket;
+- (void)stopSocket;
+
 @end

@@ -13,6 +13,11 @@
 		AAD7DAD61D519402007A9B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAD41D519402007A9B30 /* Main.storyboard */; };
 		AAD7DAD81D519402007A9B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAD71D519402007A9B30 /* Assets.xcassets */; };
 		AAD7DADB1D519402007A9B30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAD91D519402007A9B30 /* LaunchScreen.storyboard */; };
+		AAD7DAE51D5194F9007A9B30 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAE41D5194F9007A9B30 /* Podfile */; };
+		AAD7DB0E1D519ADF007A9B30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD7DB0D1D519ADF007A9B30 /* CFNetwork.framework */; };
+		AAD7DB141D519B42007A9B30 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DB111D519B42007A9B30 /* GCDAsyncSocket.m */; };
+		AAD7DB151D519B42007A9B30 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DB131D519B42007A9B30 /* GCDAsyncUdpSocket.m */; };
+		AAD7DB461D51C9DB007A9B30 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DB451D51C9DB007A9B30 /* SocketManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,14 @@
 		AAD7DAD71D519402007A9B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD7DADA1D519402007A9B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD7DADC1D519402007A9B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD7DAE41D5194F9007A9B30 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AAD7DB0D1D519ADF007A9B30 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AAD7DB101D519B42007A9B30 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		AAD7DB111D519B42007A9B30 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		AAD7DB121D519B42007A9B30 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		AAD7DB131D519B42007A9B30 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		AAD7DB441D51C9DB007A9B30 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		AAD7DB451D51C9DB007A9B30 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD7DB0E1D519ADF007A9B30 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CBDDCCB9F0950EC47DC9DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAD7DB0D1D519ADF007A9B30 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAD7DABF1D519402007A9B30 = {
 			isa = PBXGroup;
 			children = (
 				AAD7DACA1D519402007A9B30 /* CocoaSocketDemo */,
 				AAD7DAC91D519402007A9B30 /* Products */,
+				AAD7DAE41D5194F9007A9B30 /* Podfile */,
+				5CBDDCCB9F0950EC47DC9DBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +82,13 @@
 		AAD7DACA1D519402007A9B30 /* CocoaSocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AAD7DB0F1D519B42007A9B30 /* CocoaAsyncSocket */,
 				AAD7DACE1D519402007A9B30 /* AppDelegate.h */,
 				AAD7DACF1D519402007A9B30 /* AppDelegate.m */,
 				AAD7DAD11D519402007A9B30 /* ViewController.h */,
 				AAD7DAD21D519402007A9B30 /* ViewController.m */,
+				AAD7DB441D51C9DB007A9B30 /* SocketManager.h */,
+				AAD7DB451D51C9DB007A9B30 /* SocketManager.m */,
 				AAD7DAD41D519402007A9B30 /* Main.storyboard */,
 				AAD7DAD71D519402007A9B30 /* Assets.xcassets */,
 				AAD7DAD91D519402007A9B30 /* LaunchScreen.storyboard */,
@@ -77,6 +104,17 @@
 				AAD7DACC1D519402007A9B30 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAD7DB0F1D519B42007A9B30 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				AAD7DB101D519B42007A9B30 /* GCDAsyncSocket.h */,
+				AAD7DB111D519B42007A9B30 /* GCDAsyncSocket.m */,
+				AAD7DB121D519B42007A9B30 /* GCDAsyncUdpSocket.h */,
+				AAD7DB131D519B42007A9B30 /* GCDAsyncUdpSocket.m */,
+			);
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +176,7 @@
 			files = (
 				AAD7DADB1D519402007A9B30 /* LaunchScreen.storyboard in Resources */,
 				AAD7DAD81D519402007A9B30 /* Assets.xcassets in Resources */,
+				AAD7DAE51D5194F9007A9B30 /* Podfile in Resources */,
 				AAD7DAD61D519402007A9B30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,8 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD7DB141D519B42007A9B30 /* GCDAsyncSocket.m in Sources */,
+				AAD7DB151D519B42007A9B30 /* GCDAsyncUdpSocket.m in Sources */,
 				AAD7DAD31D519402007A9B30 /* ViewController.m in Sources */,
 				AAD7DAD01D519402007A9B30 /* AppDelegate.m in Sources */,
+				AAD7DB461D51C9DB007A9B30 /* SocketManager.m in Sources */,
 				AAD7DACD1D519402007A9B30 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +340,7 @@
 				AAD7DAE11D519402007A9B30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

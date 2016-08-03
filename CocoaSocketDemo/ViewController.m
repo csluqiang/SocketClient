@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "SocketManager.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) SocketManager *sharedManager;
 
 @end
 
@@ -16,12 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)startSocket:(id)sender
+{
+    self.sharedManager = [SocketManager sharedManager];
+    [self.sharedManager startSocket];
 }
+
+
+- (IBAction)stopSocket:(id)sender
+{
+    [self.sharedManager stopSocket];
+}
+
+
 
 @end
