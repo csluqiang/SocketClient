@@ -11,7 +11,7 @@
 @interface SocketManager : NSObject
 
 + (instancetype)sharedManager;
-- (void)startSocket;
+- (void)startSocketWithHost:(NSString *)host port:(NSInteger)port;
 - (void)stopSocket;
 
 @end

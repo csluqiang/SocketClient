@@ -25,7 +25,7 @@
 - (IBAction)startSocket:(id)sender
 {
     self.sharedManager = [SocketManager sharedManager];
-    [self.sharedManager startSocket];
+    [self.sharedManager startSocketWithHost:@"127.0.0.1" port:52000];
 }
 
 

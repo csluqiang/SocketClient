@@ -30,9 +30,9 @@
     return sharedInstance;
 }
 
-- (void)startSocket
+- (void)startSocketWithHost:(NSString *)host port:(NSInteger)port
 {
-    [self socketConnect];
+    [self socketConnectWithHost:host port:port];
     self.stop = NO;
 }
 
@@ -43,14 +43,14 @@
 }
 
 
-- (void)socketConnect
+- (void)socketConnectWithHost:(NSString *)host port:(NSInteger)port
 {
     if (!self.socket) {
         self.socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_queue_create("lasso.queue", NULL)];
     }
     
     NSError *error = nil;
-    [self.socket connectToHost:@"127.0.0.1" onPort:52000 withTimeout:3 error:&error];
+    [self.socket connectToHost:host onPort:port withTimeout:3 error:&error];
 }
 
 #pragma mark  - GCDAsyncSocketDelegate
@@ -69,7 +69,7 @@
 {
     NSLog(@"sorry the connect is failure %@", err);
     if (!self.stop) {
-          [self socketConnect]; // 重新连接
+          [self socketConnectWithHost:@"127.0.0.1" port:52000]; // 重新连接
     }
   
 }
