@@ -13,7 +13,6 @@
 		AAD7DAD61D519402007A9B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAD41D519402007A9B30 /* Main.storyboard */; };
 		AAD7DAD81D519402007A9B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAD71D519402007A9B30 /* Assets.xcassets */; };
 		AAD7DADB1D519402007A9B30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAD91D519402007A9B30 /* LaunchScreen.storyboard */; };
-		AAD7DAE51D5194F9007A9B30 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DAE41D5194F9007A9B30 /* Podfile */; };
 		AAD7DB0E1D519ADF007A9B30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD7DB0D1D519ADF007A9B30 /* CFNetwork.framework */; };
 		AAD7DB141D519B42007A9B30 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DB111D519B42007A9B30 /* GCDAsyncSocket.m */; };
 		AAD7DB151D519B42007A9B30 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DB131D519B42007A9B30 /* GCDAsyncUdpSocket.m */; };
@@ -31,7 +30,6 @@
 		AAD7DAD71D519402007A9B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD7DADA1D519402007A9B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD7DADC1D519402007A9B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAD7DAE41D5194F9007A9B30 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		AAD7DB0D1D519ADF007A9B30 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AAD7DB101D519B42007A9B30 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		AAD7DB111D519B42007A9B30 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			children = (
 				AAD7DACA1D519402007A9B30 /* CocoaSocketDemo */,
 				AAD7DAC91D519402007A9B30 /* Products */,
-				AAD7DAE41D5194F9007A9B30 /* Podfile */,
 				5CBDDCCB9F0950EC47DC9DBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -176,7 +173,6 @@
 			files = (
 				AAD7DADB1D519402007A9B30 /* LaunchScreen.storyboard in Resources */,
 				AAD7DAD81D519402007A9B30 /* Assets.xcassets in Resources */,
-				AAD7DAE51D5194F9007A9B30 /* Podfile in Resources */,
 				AAD7DAD61D519402007A9B30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
